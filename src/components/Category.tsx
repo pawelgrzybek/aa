@@ -32,7 +32,10 @@ function Category({ category, items, toggleItem }: CategoryProps) {
           >
             {done ? (
               <>
-                <button className="absolute inset-0 pointer-events-none">
+                <button
+                  className="absolute inset-0 pointer-events-none"
+                  aria-pressed="true"
+                >
                   <span className="sr-only">
                     Completed item: {name}, quantity: {count}
                   </span>
@@ -57,7 +60,10 @@ function Category({ category, items, toggleItem }: CategoryProps) {
               </>
             ) : (
               <>
-                <button className="absolute inset-0 pointer-events-none">
+                <button
+                  className="absolute inset-0 pointer-events-none"
+                  aria-pressed="false"
+                >
                   <span className="sr-only">
                     Uncompleted item: {name}, quantity: {count}
                   </span>
